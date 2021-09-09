@@ -19,7 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('/students', [studentsController::class, 'view']);
-Route::get('students/delete/{id}', [studentsController::class, 'delete']);
-Route::view('students/add','students.add');
+Route::get('/students/delete/{id}', [studentsController::class, 'delete']);
 
-Route::post('students/add',[studentsController::class, 'add'] );
+Route::view('/students/add','students.add');
+
+Route::post('/students/add',[studentsController::class, 'add']);

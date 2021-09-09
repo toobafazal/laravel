@@ -18,8 +18,8 @@ class studentsController extends Controller
     }
     public function add(Request $r){
         $stu = new student;
-        $stu-> stuName = $r->stuNAme;
-        $stu-> stuClass = $r->stuClass;
+        $stu->stuName=$r->stuName;
+        $stu->stuClass=$r->stuClass;
 
         $stu->save();
         return redirect('students');
