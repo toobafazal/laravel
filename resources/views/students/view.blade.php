@@ -20,7 +20,7 @@
     <td>{{$dt['stuClass']}}</td>
     <td>{{$dt['created_at']}}</td>
     <td>{{$dt['updated_at']}}</td>
-    <td><a href="/student/delete/{{$dt['id']}}">DELETE</a></td>
+    <td><a href="/students/delete/{{$dt['id']}}">DELETE</a></td>
 
     </tr>
 @endforeach
