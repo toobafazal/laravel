@@ -25,4 +25,17 @@ class studentsController extends Controller
         return redirect('students');
 
     }
+    public function update($id){
+        $data = student::find($id);
+        return view('students.update',['data'=>$data]);
+    }
+    public function change(Request $r){
+        $stu = student::find($r->id);
+        $stu->stuName=$r->stuName;
+        $stu->stuClass=$r->stuClass;
+
+        $stu->save();
+        return redirect('students');
+
+    }
 }
